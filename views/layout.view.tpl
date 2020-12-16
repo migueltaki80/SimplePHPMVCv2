@@ -6,8 +6,8 @@
             <meta name="viewport" content="width=device-width, initial-scale=1"/>
             <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
             <link rel="stylesheet" href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-            <link rel="stylesheet" href="public/css/papier.css" />
             <link rel="stylesheet" href="public/css/estilo.css" />
+            <link rel="stylesheet" href="public/css/paper.css" />
             <script src="public/js/jquery.min.js"></script>
             {{foreach css_ref}}
                 <link rel="stylesheet" href="{{uri}}" />
@@ -17,6 +17,8 @@
           <div class="menu">
               <div class="brand"><a href="index.php?page=home">{{page_title}}</a></div>
               <ul>
+                  <li><a href="index.php?page=sobre">Sobre Nosotros</a></li>
+                  <li><a href="index.php?page=catalogo">Catalogo</a></li>
                   <li><a href="index.php?page=login">Iniciar Sesión</a></li>
               </ul>
               <div class="hbtn"> <div>&nbsp;</div><div>&nbsp;</div><div>&nbsp;</div></div>
@@ -26,7 +28,7 @@
             </div>
 
             <div class="footer">
-                Derechos Reservados 2018
+                Derechos Reservados &copy2020
             </div>
             {{foreach js_ref}}
                 <script src="{{uri}}"></script>

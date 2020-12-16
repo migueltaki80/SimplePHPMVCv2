@@ -1,9 +1,6 @@
 <div class="heropanel">
-  <h1>
-    Simple PHP MVC Demo
-  </h1>
-
-  <a href="index.php?page=admin" class="btn btn-primary">Crear Cuenta</a>
+  <h1><span class="badge secondary">Offer</span>Books</h1>
+  <a href="index.php?page=newclient&mode=INS&usercod=0" class="btn btn-primary">Crear Cuenta</a>
 </div>
 <section class="cards">
   <div>
@@ -17,3 +14,4 @@
   </div>
 </section>
 <link rel="stylesheet" href="public/css/hero.css" />
+

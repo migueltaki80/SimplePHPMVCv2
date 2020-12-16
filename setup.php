@@ -5,7 +5,7 @@
   // geenrar la contraseña salada (salting)
   $usuario = obtenerUsuarioPorEmail('admin@demo.com');
   if(count($usuario) == 0){
-    $pswd = 'CorpDemo%33';
+    $pswd = 'Admin$';
     $fchingreso = time();
     $pswdSalted = "";
     if($fchingreso % 2 == 0){
@@ -20,7 +20,7 @@
                   'admin@demo.com',
                   $fchingreso, $pswdSalted, 'ADM');
 
-    echo "Administrador creado: correo: admin@demo.com, contraseña: CorpDemo%33";
+    echo "Administrador creado: correo: admin@demo.com, contraseña: Admin$";
     echo "<br /><br />Cambiarla lo mas pronto posible";
   }
 ?>

@@ -103,13 +103,13 @@ function validarLogin($loginEmail, $loginPswd)
             $loginPswd = $salt . $loginPswd;
         }
 
-        $loginPswd = md5($loginPswd);
+        $loginPswd = hash("sha256", $loginPswd);
 
         if ($usuario["userpswd"] == $loginPswd) {
             mw_setEstaLogueado(
                 $usuario["usercod"],
                 $usuario["username"],
-                $usuario["useremail"],
+                $usuario["email_user"],
                 $usuario["usertipo"],
                 true
             );

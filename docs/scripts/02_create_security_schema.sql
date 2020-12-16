@@ -1,7 +1,6 @@
-use demoalgorith;
+use offerbook;
 CREATE TABLE `usuario` (
   `usercod` bigint(10) NOT NULL AUTO_INCREMENT,
-  `useremail` varchar(80) DEFAULT NULL,
   `username` varchar(80) DEFAULT NULL,
   `userpswd` varchar(128) DEFAULT NULL,
   `userfching` datetime DEFAULT NULL,
@@ -10,10 +9,21 @@ CREATE TABLE `usuario` (
   `userest` char(3) DEFAULT NULL,
   `useractcod` varchar(128) DEFAULT NULL,
   `userpswdchg` varchar(128) DEFAULT NULL,
-  `usertipo` char(3) DEFAULT NULL COMMENT 'Tipo de Usuario, Normal, Consultor o Cliente',
+  `usertipo` char(3) DEFAULT NULL COMMENT 'Tipo de Usuario, Normal',
+  `nombre_user` varchar(40) null,
+	`apellido_user` varchar(40) null,
+	`fecha_nacimiento_user` date null,
+	`numero_identidad_user` varchar(20) null,
+	`direccion_residencia_user` nvarchar(45) null,
+  `telefono_user1` nvarchar(10) null,
+  `telefono_user2` nvarchar(10) null,
+	`email_user` nvarchar(80) default null,
+	`ciudad_user` varchar(40) null,
+	`sexo_user` varchar(3) null,
+
   PRIMARY KEY (`usercod`),
-  UNIQUE KEY `useremail_UNIQUE` (`useremail`),
-  KEY `usertipo` (`usertipo`,`useremail`,`usercod`,`userest`)
+  UNIQUE KEY `useremail_UNIQUE` (`email_user`),
+  KEY `usertipo` (`usertipo`,`email_user`,`usercod`,`userest`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 
 CREATE TABLE `roles` (
@@ -53,15 +63,3 @@ CREATE TABLE `funciones_roles` (
   CONSTRAINT `funcion_rol_key` FOREIGN KEY (`rolescod`) REFERENCES `roles` (`rolescod`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `rol_funcion_key` FOREIGN KEY (`fncod`) REFERENCES `funciones` (`fncod`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
-
-CREATE TABLE `bitacora` (
-  `bitacoracod` int(11) NOT NULL AUTO_INCREMENT,
-  `bitacorafch` datetime DEFAULT NULL,
-  `bitprograma` varchar(15) DEFAULT NULL,
-  `bitdescripcion` varchar(255) DEFAULT NULL,
-  `bitobservacion` mediumtext,
-  `bitTipo` char(3) DEFAULT NULL,
-  `bitusuario` bigint(18) DEFAULT NULL,
-  PRIMARY KEY (`bitacoracod`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;

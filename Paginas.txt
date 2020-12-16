@@ -1,0 +1,32 @@
+
+* 1 - Pagina Crear Nueva Cuenta - Insert Kevin y miguel
+
+
+*Cliente Normal
+
+5 Pagina Catalogo - todos los productos
+
+Pagina Compras -
+
+Pagina lista de Carrito de compras
+
+Pagina Pasarela de PAgo
+
+
+*administrador
+
+Pagina Mantenimiento Usuario
+
+5 - Pagina Catalogo - todos los productos Miguel y Kevin
+
+Pagina historia de transacciones todas las transacciones
+
+ 
+*4 - Pagina Crear producto Jose y Miguel 
+
+
+
+Paginas
+cliente nuevo
+Todos los Productos
+Todos los Usuarios
